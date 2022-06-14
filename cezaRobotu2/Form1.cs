@@ -15,11 +15,14 @@ namespace cezaRobotu2
         public Form1()
         {
             InitializeComponent();
+            dataGridView1.Rows.Add("20. maddesinin 1. fıkrasının (a) bendi", 50000, 500000, 68100, 681000);
+            dataGridView1.Rows.Add("20. maddesinin 1. fıkrasının (b) bendi", 20000, 200000, 27420, 274200);
+            dataGridView1.Rows.Add("20. maddesinin 1. fıkrasının (c) bendi", 20000, 200000, 27420, 274200);
+            dataGridView1.Rows.Add("20. maddesinin 1. fıkrasının (ç) bendi", 10000, 100000, 13620, 136200);
+            dataGridView1.Rows.Add("20. maddesinin 1. fıkrasının (e) bendi", 7000, 70000, 9534, 95340);
+            dataGridView1.Rows.Add("20. maddesinin 5. fıkrası", 20000, 200000, 27420, 274200);
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
