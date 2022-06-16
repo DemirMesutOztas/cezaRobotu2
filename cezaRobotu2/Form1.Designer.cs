@@ -218,6 +218,7 @@ namespace cezaRobotu2
             // 
             // comboBox4
             // 
+            this.comboBox4.Enabled = false;
             this.comboBox4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
@@ -325,6 +326,7 @@ namespace cezaRobotu2
             // 
             // comboBox7
             // 
+            this.comboBox7.Enabled = false;
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Items.AddRange(new object[] {
             "Evet",

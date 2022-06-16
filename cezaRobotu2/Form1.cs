@@ -23,15 +23,17 @@ namespace cezaRobotu2
 
 
         Form2 secondForm = new Form2();
+            
+            
+            
 
 
         public Form1()
         {
             InitializeComponent();
+
+
             
-
-
-
         }
 
         public void cezaLimitleriToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,11 +45,19 @@ namespace cezaRobotu2
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            
-               
 
-            
+
+            if (comboBox1.SelectedIndex == 0 || comboBox1.SelectedIndex == 2)
+            {
+                comboBox4.Enabled = true;
+              comboBox7.Enabled = true;
+                
+
+
+            }
+            MessageBox.Show(comboBox1.SelectedIndex.ToString());
+
+
 
 
 
@@ -134,82 +144,28 @@ namespace cezaRobotu2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            switch (comboBox1.SelectedIndex)
+            int x=-1;
+            x = comboBox1.SelectedIndex;
+
+            if (comboBox2.SelectedItem.ToString() == "2021")
             {
-                case 0:
-                    if (comboBox2.SelectedItem.ToString() == "2021")
-                    {
-                        altlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[0].Cells[1].Value);
-                        ustlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[0].Cells[2].Value);
-                    }
-                    else if (comboBox2.SelectedItem.ToString() == "2022")
-                    {
-                        altlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[0].Cells[3].Value);
-                        ustlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[0].Cells[4].Value);
-                    }
-                    MessageBox.Show(altlimit.ToString());
-                    break;
-
-                case 1:
-                    if (comboBox2.SelectedItem.ToString() == "2021")
-                    {
-                        altlimit = (int)secondForm.dataGridView1.Rows[1].Cells[1].Value;
-                        ustlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[1].Cells[2].Value);
-                    }
-                    else if (comboBox2.SelectedItem.ToString() == "2022")
-                    {
-                        altlimit = (int)secondForm.dataGridView1.Rows[1].Cells[3].Value;
-                        ustlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[1].Cells[4].Value);
-                    }
-                    MessageBox.Show(altlimit.ToString());
-                    break;
-
-                case 2:
-
-                    altlimit = (int)secondForm.dataGridView1.Rows[2].Cells[1].Value;
-                    MessageBox.Show(altlimit.ToString());
-                    break;
-
-                case 3:
-
-                    altlimit = (int)secondForm.dataGridView1.Rows[3].Cells[1].Value;
-                    MessageBox.Show(altlimit.ToString());
-                    break;
-
-                case 4:
-
-                    altlimit = (int)secondForm.dataGridView1.Rows[4].Cells[1].Value;
-                    MessageBox.Show(altlimit.ToString());
-                    break;
-
-                case 5:
-
-                    altlimit = (int)secondForm.dataGridView1.Rows[5].Cells[1].Value;
-                    MessageBox.Show(altlimit.ToString());
-                    break;
-
-                case 6:
-
-                    altlimit = (int)secondForm.dataGridView1.Rows[6].Cells[1].Value;
-                    MessageBox.Show(altlimit.ToString());
-                    break;
-
-                case 7:
-
-                    altlimit = (int)secondForm.dataGridView1.Rows[7].Cells[1].Value;
-                    MessageBox.Show(altlimit.ToString());
-                    break;
+                altlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[x].Cells[1].Value);
+                ustlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[x].Cells[2].Value);
+            }
+            else if (comboBox2.SelectedItem.ToString() == "2022")
+            {
+                altlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[x].Cells[3].Value);
+                ustlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[x].Cells[4].Value);
             }
 
-            
+           
+            sonuc = altlimit * sinif * hse * tekrar;
+
             if (sonuc > ustlimit || (comboBox7.SelectedItem.ToString() == "Evet"))
             {
                 sonuc = ustlimit;
             }
-            else
-            {
-                sonuc = altlimit * sinif * hse * tekrar;
-            }
+            
 
             textBox1.Text = sonuc.ToString();
 
