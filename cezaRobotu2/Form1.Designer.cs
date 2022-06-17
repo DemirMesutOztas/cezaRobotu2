@@ -88,7 +88,7 @@ namespace cezaRobotu2
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(9, 246);
+            this.label4.Location = new System.Drawing.Point(653, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 16);
             this.label4.TabIndex = 6;
@@ -119,7 +119,7 @@ namespace cezaRobotu2
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(9, 191);
+            this.label5.Location = new System.Drawing.Point(653, 49);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(138, 16);
             this.label5.TabIndex = 11;
@@ -218,14 +218,13 @@ namespace cezaRobotu2
             // 
             // comboBox4
             // 
-            this.comboBox4.Enabled = false;
             this.comboBox4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
             "Düşük:  Ürün kaynaklı zarar gören tespit edilmedi",
             "Orta: Ürün kaynaklı geçici ve tedavi edilebilir zarar gören tespit edildi",
             "Yüksek: Ürün kaynaklı kalıcı ve ciddi zarar gören tespit edildi"});
-            this.comboBox4.Location = new System.Drawing.Point(9, 210);
+            this.comboBox4.Location = new System.Drawing.Point(653, 68);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(459, 24);
             this.comboBox4.TabIndex = 15;
@@ -239,17 +238,18 @@ namespace cezaRobotu2
             this.comboBox5.Items.AddRange(new object[] {
             "Seviye 1: Teknik düzenlemeye aykırılık",
             "Seviye 2: Ürün güvenliğine aykırılık"});
-            this.comboBox5.Location = new System.Drawing.Point(9, 265);
+            this.comboBox5.Location = new System.Drawing.Point(653, 123);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(459, 24);
             this.comboBox5.TabIndex = 16;
             this.comboBox5.Text = "Seçiniz";
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(582, 52);
+            this.label6.Location = new System.Drawing.Point(653, 174);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(209, 16);
             this.label6.TabIndex = 17;
@@ -259,7 +259,7 @@ namespace cezaRobotu2
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(582, 101);
+            this.label7.Location = new System.Drawing.Point(653, 223);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 16);
             this.label7.TabIndex = 20;
@@ -269,7 +269,7 @@ namespace cezaRobotu2
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(582, 160);
+            this.label8.Location = new System.Drawing.Point(653, 282);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(200, 16);
             this.label8.TabIndex = 23;
@@ -315,10 +315,11 @@ namespace cezaRobotu2
             // comboBox6
             // 
             this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.IntegralHeight = false;
             this.comboBox6.Items.AddRange(new object[] {
             "Evet",
             "Hayır"});
-            this.comboBox6.Location = new System.Drawing.Point(820, 47);
+            this.comboBox6.Location = new System.Drawing.Point(891, 169);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(121, 21);
             this.comboBox6.TabIndex = 30;
@@ -326,15 +327,15 @@ namespace cezaRobotu2
             // 
             // comboBox7
             // 
-            this.comboBox7.Enabled = false;
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Items.AddRange(new object[] {
             "Evet",
             "Hayır"});
-            this.comboBox7.Location = new System.Drawing.Point(820, 96);
+            this.comboBox7.Location = new System.Drawing.Point(891, 218);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(121, 21);
             this.comboBox7.TabIndex = 31;
+            this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
             // comboBox8
             // 
@@ -342,7 +343,7 @@ namespace cezaRobotu2
             this.comboBox8.Items.AddRange(new object[] {
             "Evet",
             "Hayır"});
-            this.comboBox8.Location = new System.Drawing.Point(820, 155);
+            this.comboBox8.Location = new System.Drawing.Point(891, 277);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(121, 21);
             this.comboBox8.TabIndex = 32;
