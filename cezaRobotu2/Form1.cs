@@ -221,8 +221,12 @@ namespace cezaRobotu2
             {
                 sonuc = ustlimit;
             }
-            
 
+           
+
+            textBox2.Text += comboBox1.SelectedItem.ToString()+"\n" + comboBox2.SelectedItem.ToString()+"\n" + comboBox3.SelectedItem.ToString()+"\n" +
+                            comboBox5.SelectedItem.ToString()+"\n" + comboBox4.SelectedItem.ToString()+"\n" + comboBox6.SelectedItem.ToString()+"\n" +
+                            comboBox7.SelectedItem.ToString()+"\n" + comboBox8.SelectedItem.ToString()+"\n";
 
             textBox1.Text = sonuc.ToString();
 
