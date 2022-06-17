@@ -52,6 +52,7 @@ namespace cezaRobotu2
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -351,17 +352,28 @@ namespace cezaRobotu2
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.Location = new System.Drawing.Point(12, 223);
+            this.textBox2.Location = new System.Drawing.Point(12, 261);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(456, 259);
+            this.textBox2.Size = new System.Drawing.Size(456, 221);
             this.textBox2.TabIndex = 33;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(12, 240);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(175, 18);
+            this.label10.TabIndex = 34;
+            this.label10.Text = "Hesaplama Katsayıları:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 569);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.comboBox8);
             this.Controls.Add(this.comboBox7);
@@ -420,6 +432,7 @@ namespace cezaRobotu2
         public System.Windows.Forms.ComboBox comboBox8;
         public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label10;
     }
 }
 
