@@ -58,7 +58,10 @@ namespace cezaRobotu2
             dataGridView1.Rows.Add("19 uncu maddesinin üçüncü fıkrası", "20. maddesinin 1. fıkrasının (e)” bendi", 7000, 70000, 9534, 95340);
             dataGridView1.Rows.Add("21 inci maddesinin beşinci fıkrası", "20. maddesinin 1. fıkrasının (ç) bendi", 10000, 100000, 13620, 136200);
 
+           
         }
+
+        
 
     }
 
