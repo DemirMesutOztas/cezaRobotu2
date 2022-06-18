@@ -17,7 +17,7 @@ namespace cezaRobotu2
         public double altlimit;
         public double sinif;
         public double hse;
-        public double tekrar=1;
+        public double tekrar;
         public double olum=1;
         public double sonuc;
         public double ustlimit;
@@ -53,6 +53,10 @@ namespace cezaRobotu2
             {
                 comboBox5.Enabled = false;
                 comboBox8.Enabled = false;
+                comboBox4.Enabled = true;
+                
+                comboBox7.Enabled = true;
+                comboBox3.Enabled = true;
 
 
             }
@@ -67,15 +71,17 @@ namespace cezaRobotu2
                 comboBox5.Enabled = false;
                 comboBox8.Enabled = false;
                 comboBox7.Enabled = false;
+                comboBox3.Enabled = true;
 
 
             }
             else if (comboBox1.SelectedIndex == 19 || comboBox1.SelectedIndex == 27)
             {
-                comboBox4.Enabled = false;
-               
-                comboBox8.Enabled = false;
-                comboBox7.Enabled = false;
+                comboBox4.Enabled = true;
+                comboBox3.Enabled = false;
+                comboBox8.Enabled = true;
+                comboBox7.Enabled = true;
+                comboBox5.Enabled = true;
             }
             else if ((comboBox1.SelectedIndex == 5 || comboBox1.SelectedIndex == 6 || comboBox1.SelectedIndex == 8 || comboBox1.SelectedIndex == 11
                       || comboBox1.SelectedIndex == 16 || comboBox1.SelectedIndex == 18 || comboBox1.SelectedIndex == 24 || comboBox1.SelectedIndex == 25
@@ -86,7 +92,9 @@ namespace cezaRobotu2
                 comboBox5.Enabled = false;
                 comboBox8.Enabled = false;
                 comboBox7.Enabled = false;
-                comboBox6.Enabled = false;
+                
+                comboBox3.Enabled = false;
+
             }
             
         }
@@ -160,11 +168,11 @@ namespace cezaRobotu2
 
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox6.SelectedItem.ToString() == "Evet")
+            if (comboBox6.SelectedIndex==0)
             {
                 tekrar = 2;
             }
-            else
+            else if (comboBox6.SelectedIndex==1)
             {
                 tekrar = 1;
             }
@@ -195,8 +203,16 @@ namespace cezaRobotu2
             */
         }
 
+        private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
+            textBox1.Clear();
+            textBox2.Clear();
+
             int x;
             x = comboBox1.SelectedIndex;
 
@@ -259,7 +275,7 @@ namespace cezaRobotu2
             }
             else if (comboBox1.SelectedIndex == 19 || comboBox1.SelectedIndex == 27)
             {
-                if (comboBox8.SelectedItem.ToString() == "Evet")
+                if (comboBox8.SelectedIndex==0)
                 {
                     if (comboBox7.SelectedItem.ToString() == "Evet")
                     {
@@ -270,7 +286,7 @@ namespace cezaRobotu2
                         }
                         textBox2.Text += "Ölüm durumunda üst limit uygulanır." + "\r\n" + "Üst Limit: " + ustlimit;
                     }
-                    else
+                    else if(comboBox7.SelectedItem.ToString() == "Hayır")
                     {
                         sonuc = altlimit * aykirilik * hse * tekrar;
                         if (sonuc > ustlimit)
@@ -286,7 +302,7 @@ namespace cezaRobotu2
 
                     
                 }
-                else if(comboBox8.SelectedItem.ToString()=="Hayır")
+                else if(comboBox8.SelectedIndex==1)
                 {
                     sonuc = altlimit * aykirilik * tekrar;
                     if (sonuc > ustlimit)
@@ -330,6 +346,28 @@ namespace cezaRobotu2
 
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
+            comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex = -1;
+            comboBox3.SelectedIndex = -1;
+            comboBox4.SelectedIndex = -1;
+            comboBox5.SelectedIndex = -1;
+            comboBox6.SelectedIndex = -1;
+            comboBox7.SelectedIndex = -1;
+            comboBox8.SelectedIndex = -1;
+            comboBox1.Text = "Seçiniz";
+            comboBox2.Text = "Seçiniz";
+            comboBox3.Text = "Seçiniz";
+            comboBox4.Text = "Seçiniz";
+            comboBox5.Text = "Seçiniz";
+            comboBox6.Text = "Seçiniz";
+            comboBox7.Text = "Seçiniz";
+            comboBox8.Text = "Seçiniz";
+            textBox1.Clear();
+            textBox2.Clear();
+        }
+
+        
     }
 }
