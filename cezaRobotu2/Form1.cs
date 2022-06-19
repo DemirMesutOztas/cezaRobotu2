@@ -252,7 +252,7 @@ namespace cezaRobotu2
                         }
                         textBox2.Text += "Alt Limit: " + altlimit + "\r\n" + "Ürün Sınıfı: " + sinif + "\r\n" +
                                          "Halk Sağlığına Etkisi: " + hse + "\r\n" + "Tekrar Durumu: " + tekrar + "\r\n" +
-                                         "Sonuç: " + sonuc;
+                                         "Sonuç: " + altlimit + "*" + sinif + "*" + hse +"*" + tekrar;
                     }
                 
 
@@ -274,7 +274,7 @@ namespace cezaRobotu2
                     }
                     textBox2.Text += "Alt Limit: " + altlimit + "\r\n" + "Ürün Sınıfı: " + sinif + "\r\n" +
                                      "Tekrar Durumu: " + tekrar + "\r\n" +
-                                     "Sonuç: " + sonuc;
+                                     "Sonuç: " + altlimit + "*" + sinif + "*" + tekrar;
 
                 }
                 else if (comboBox1.SelectedIndex == 19 || comboBox1.SelectedIndex == 27)
@@ -299,7 +299,7 @@ namespace cezaRobotu2
                             }
                             textBox2.Text += "Alt Limit: " + altlimit + "\r\n" + "Ürün Sınıfı: " + sinif + "\r\n" + "Aykırılık Seviyei: " + aykirilik + "\r\n" + "Halk Sağlığına Etkisi: " + hse + "\r\n" +
                                              "Tekrar Durumu: " + tekrar + "\r\n" +
-                                             "Sonuç: " + sonuc;
+                                              "Sonuç: " + altlimit + "*" + sinif + "*" + aykirilik + "*" + hse + "*" + tekrar;
                         }
 
 
@@ -315,7 +315,7 @@ namespace cezaRobotu2
                         }
                         textBox2.Text += "Alt Limit: " + altlimit + "\r\n" + "Aykırılık Seviyesi: " + aykirilik + "\r\n" +
                                          "Tekrar Durumu: " + tekrar + "\r\n" +
-                                         "Sonuç: " + sonuc;
+                                          "Sonuç: " + altlimit + "*" +aykirilik + "*" + tekrar;
                     }
                 
                 }
@@ -333,7 +333,7 @@ namespace cezaRobotu2
 
                     textBox2.Text += "Alt Limit: " + altlimit + "\r\n"  +
                                      "Tekrar Durumu: " + tekrar + "\r\n" +
-                                     "Sonuç: " + sonuc;
+                                      "Sonuç: " + altlimit + "*" + tekrar;
                 }
 
 
@@ -347,11 +347,11 @@ namespace cezaRobotu2
              }
             catch (System.NullReferenceException)
             {
-
-                   MessageBox.Show("Aktif tüm alanlar doldurulmalıdır.");
+                MessageBox.Show("Aktif tüm alanlar doldurulmalıdır!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
             }
-
-                textBox1.Text = sonuc.ToString();
+     
+            textBox1.Text = sonuc.ToString();
 
 
         }
