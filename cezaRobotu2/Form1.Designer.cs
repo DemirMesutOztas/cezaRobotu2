@@ -29,6 +29,7 @@ namespace cezaRobotu2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,9 +61,10 @@ namespace cezaRobotu2
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(22, 41);
+            this.label1.Location = new System.Drawing.Point(33, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 16);
+            this.label1.Size = new System.Drawing.Size(156, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kanun Maddesi";
             // 
@@ -70,9 +72,10 @@ namespace cezaRobotu2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(22, 93);
+            this.label2.Location = new System.Drawing.Point(33, 143);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 16);
+            this.label2.Size = new System.Drawing.Size(58, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tarih";
             // 
@@ -80,9 +83,10 @@ namespace cezaRobotu2
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(22, 148);
+            this.label3.Location = new System.Drawing.Point(33, 228);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 16);
+            this.label3.Size = new System.Drawing.Size(109, 24);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ürün Sınıfı";
             // 
@@ -90,18 +94,20 @@ namespace cezaRobotu2
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(456, 87);
+            this.label4.Location = new System.Drawing.Point(684, 134);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 16);
+            this.label4.Size = new System.Drawing.Size(167, 24);
             this.label4.TabIndex = 6;
             this.label4.Text = "Aykırılık Seviyesi";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(461, 302);
+            this.button1.Location = new System.Drawing.Point(692, 465);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 40);
+            this.button1.Size = new System.Drawing.Size(200, 62);
             this.button1.TabIndex = 8;
             this.button1.Text = "Hesapla";
             this.button1.UseVisualStyleBackColor = true;
@@ -110,9 +116,10 @@ namespace cezaRobotu2
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(669, 302);
+            this.button2.Location = new System.Drawing.Point(1004, 465);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 40);
+            this.button2.Size = new System.Drawing.Size(195, 62);
             this.button2.TabIndex = 9;
             this.button2.Text = "Temizle";
             this.button2.UseVisualStyleBackColor = true;
@@ -122,9 +129,10 @@ namespace cezaRobotu2
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(456, 41);
+            this.label5.Location = new System.Drawing.Point(684, 63);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 16);
+            this.label5.Size = new System.Drawing.Size(201, 24);
             this.label5.TabIndex = 11;
             this.label5.Text = "Halk Sağlığına Etkisi";
             // 
@@ -175,9 +183,10 @@ namespace cezaRobotu2
             "19 uncu maddesinin ikinci fıkrası",
             "19 uncu maddesinin üçüncü fıkrası",
             "21 inci maddesinin beşinci fıkrasına"});
-            this.comboBox1.Location = new System.Drawing.Point(22, 60);
+            this.comboBox1.Location = new System.Drawing.Point(33, 92);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(351, 24);
+            this.comboBox1.Size = new System.Drawing.Size(524, 32);
             this.comboBox1.TabIndex = 12;
             this.comboBox1.Tag = "";
             this.comboBox1.Text = "Seçiniz";
@@ -190,9 +199,10 @@ namespace cezaRobotu2
             this.comboBox2.Items.AddRange(new object[] {
             "2021",
             "2022"});
-            this.comboBox2.Location = new System.Drawing.Point(22, 112);
+            this.comboBox2.Location = new System.Drawing.Point(33, 172);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(351, 24);
+            this.comboBox2.Size = new System.Drawing.Size(524, 32);
             this.comboBox2.TabIndex = 13;
             this.comboBox2.Text = "Seçiniz";
             // 
@@ -212,9 +222,10 @@ namespace cezaRobotu2
             "Kişisel Test Cihazları",
             "Liste B",
             "Liste A"});
-            this.comboBox3.Location = new System.Drawing.Point(22, 167);
+            this.comboBox3.Location = new System.Drawing.Point(33, 257);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(351, 24);
+            this.comboBox3.Size = new System.Drawing.Size(524, 32);
             this.comboBox3.TabIndex = 14;
             this.comboBox3.Text = "Seçiniz";
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
@@ -229,9 +240,10 @@ namespace cezaRobotu2
             "Düşük:  Ürün kaynaklı zarar gören tespit edilmedi",
             "Orta: Ürün kaynaklı geçici ve tedavi edilebilir zarar gören tespit edildi",
             "Yüksek: Ürün kaynaklı kalıcı ve ciddi zarar gören tespit edildi"});
-            this.comboBox4.Location = new System.Drawing.Point(459, 60);
+            this.comboBox4.Location = new System.Drawing.Point(688, 92);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(340, 24);
+            this.comboBox4.Size = new System.Drawing.Size(508, 32);
             this.comboBox4.TabIndex = 15;
             this.comboBox4.Text = "Seçiniz";
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
@@ -243,9 +255,10 @@ namespace cezaRobotu2
             this.comboBox5.Items.AddRange(new object[] {
             "Seviye 1: Teknik düzenlemeye aykırılık",
             "Seviye 2: Ürün güvenliğine aykırılık"});
-            this.comboBox5.Location = new System.Drawing.Point(459, 112);
+            this.comboBox5.Location = new System.Drawing.Point(688, 172);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(340, 24);
+            this.comboBox5.Size = new System.Drawing.Size(508, 32);
             this.comboBox5.TabIndex = 16;
             this.comboBox5.Text = "Seçiniz";
             this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
@@ -254,9 +267,10 @@ namespace cezaRobotu2
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(456, 202);
+            this.label6.Location = new System.Drawing.Point(684, 311);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(209, 16);
+            this.label6.Size = new System.Drawing.Size(302, 24);
             this.label6.TabIndex = 17;
             this.label6.Text = "İki yıl içerisinde tekrarlandı mı?";
             // 
@@ -264,9 +278,10 @@ namespace cezaRobotu2
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(456, 167);
+            this.label7.Location = new System.Drawing.Point(684, 257);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 16);
+            this.label7.Size = new System.Drawing.Size(136, 24);
             this.label7.TabIndex = 20;
             this.label7.Text = "Ölüm var mı?";
             // 
@@ -274,9 +289,10 @@ namespace cezaRobotu2
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(456, 242);
+            this.label8.Location = new System.Drawing.Point(684, 372);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(200, 16);
+            this.label8.Size = new System.Drawing.Size(292, 24);
             this.label8.TabIndex = 23;
             this.label8.Text = "Ürün güvenliğini etkiliyor mu?";
             // 
@@ -284,9 +300,10 @@ namespace cezaRobotu2
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(22, 358);
+            this.label9.Location = new System.Drawing.Point(33, 551);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 16);
+            this.label9.Size = new System.Drawing.Size(70, 24);
             this.label9.TabIndex = 26;
             this.label9.Text = "Sonuç";
             // 
@@ -294,9 +311,10 @@ namespace cezaRobotu2
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox1.ForeColor = System.Drawing.Color.Red;
-            this.textBox1.Location = new System.Drawing.Point(81, 358);
+            this.textBox1.Location = new System.Drawing.Point(122, 551);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 22);
+            this.textBox1.Size = new System.Drawing.Size(240, 30);
             this.textBox1.TabIndex = 27;
             // 
             // menuStrip1
@@ -307,7 +325,8 @@ namespace cezaRobotu2
             this.cezaLimitleriToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(915, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1372, 34);
             this.menuStrip1.TabIndex = 29;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -315,7 +334,7 @@ namespace cezaRobotu2
             // 
             this.cezaLimitleriToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cezaLimitleriToolStripMenuItem.Name = "cezaLimitleriToolStripMenuItem";
-            this.cezaLimitleriToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.cezaLimitleriToolStripMenuItem.Size = new System.Drawing.Size(153, 28);
             this.cezaLimitleriToolStripMenuItem.Text = "Ceza Limitleri";
             this.cezaLimitleriToolStripMenuItem.Visible = false;
             this.cezaLimitleriToolStripMenuItem.Click += new System.EventHandler(this.cezaLimitleriToolStripMenuItem_Click);
@@ -328,9 +347,10 @@ namespace cezaRobotu2
             this.comboBox6.Items.AddRange(new object[] {
             "Evet",
             "Hayır"});
-            this.comboBox6.Location = new System.Drawing.Point(678, 201);
+            this.comboBox6.Location = new System.Drawing.Point(1017, 309);
+            this.comboBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 24);
+            this.comboBox6.Size = new System.Drawing.Size(180, 32);
             this.comboBox6.TabIndex = 30;
             this.comboBox6.Text = "Seçiniz";
             this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
@@ -342,9 +362,10 @@ namespace cezaRobotu2
             this.comboBox7.Items.AddRange(new object[] {
             "Evet",
             "Hayır"});
-            this.comboBox7.Location = new System.Drawing.Point(678, 162);
+            this.comboBox7.Location = new System.Drawing.Point(1017, 249);
+            this.comboBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(121, 24);
+            this.comboBox7.Size = new System.Drawing.Size(180, 32);
             this.comboBox7.TabIndex = 31;
             this.comboBox7.Text = "Seçiniz";
             this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
@@ -356,9 +377,10 @@ namespace cezaRobotu2
             this.comboBox8.Items.AddRange(new object[] {
             "Evet",
             "Hayır"});
-            this.comboBox8.Location = new System.Drawing.Point(678, 244);
+            this.comboBox8.Location = new System.Drawing.Point(1017, 375);
+            this.comboBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(121, 24);
+            this.comboBox8.Size = new System.Drawing.Size(180, 32);
             this.comboBox8.TabIndex = 32;
             this.comboBox8.Text = "Seçiniz";
             this.comboBox8.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
@@ -366,28 +388,30 @@ namespace cezaRobotu2
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.Location = new System.Drawing.Point(18, 242);
+            this.textBox2.Location = new System.Drawing.Point(27, 372);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(355, 100);
+            this.textBox2.Size = new System.Drawing.Size(530, 152);
             this.textBox2.TabIndex = 33;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(22, 221);
+            this.label10.Location = new System.Drawing.Point(33, 340);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(154, 16);
+            this.label10.Size = new System.Drawing.Size(225, 24);
             this.label10.TabIndex = 34;
             this.label10.Text = "Hesaplama Katsayıları:";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(915, 392);
+            this.ClientSize = new System.Drawing.Size(1372, 603);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBox8);
             this.Controls.Add(this.label5);
@@ -412,7 +436,9 @@ namespace cezaRobotu2
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
             this.HelpButton = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Ceza Robotu";
             this.menuStrip1.ResumeLayout(false);
