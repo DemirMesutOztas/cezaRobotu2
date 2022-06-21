@@ -49,6 +49,8 @@ namespace cezaRobotu2
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cezaLimitleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.robotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cezaLimitleriToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.comboBox8 = new System.Windows.Forms.ComboBox();
@@ -138,10 +140,14 @@ namespace cezaRobotu2
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.DropDownWidth = 440;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "7 nci maddesinin birinci fıkrasının (a) bendi",
+            "7 nci maddesinin birinci fıkrasının (a) bendi (ürün güvenliği dışındaki)",
             "7 nci maddesinin birinci fıkrasının (b) bendi",
             "7 nci maddesinin birinci fıkrasının (c) bendi",
             "7 nci maddesinin birinci fıkrasının (ç) bendi",
@@ -155,6 +161,7 @@ namespace cezaRobotu2
             "7 nci maddesinin birinci fıkrasının (i) bendi",
             "8 inci maddesinin ikinci fıkrasına",
             "9 uncu maddesinin birinci fıkrasının (a) bendi",
+            "9 uncu maddesinin birinci fıkrasının (a) bendi (ürün güvenliği dışındaki)",
             "9 uncu maddesinin birinci fıkrasının (b) bendi",
             "9 uncu maddesinin birinci fıkrasının (c) bendi",
             "9 uncu maddesinin birinci fıkrasının (ç) bendi",
@@ -186,15 +193,16 @@ namespace cezaRobotu2
             this.comboBox1.Location = new System.Drawing.Point(33, 92);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(524, 32);
+            this.comboBox1.Size = new System.Drawing.Size(524, 29);
             this.comboBox1.TabIndex = 12;
             this.comboBox1.Tag = "";
-            this.comboBox1.Text = "Seçiniz";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "2021",
@@ -202,13 +210,14 @@ namespace cezaRobotu2
             this.comboBox2.Location = new System.Drawing.Point(33, 172);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(524, 32);
+            this.comboBox2.Size = new System.Drawing.Size(524, 29);
             this.comboBox2.TabIndex = 13;
-            this.comboBox2.Text = "Seçiniz";
             // 
             // comboBox3
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "Sınıf I Diğer",
@@ -225,15 +234,16 @@ namespace cezaRobotu2
             this.comboBox3.Location = new System.Drawing.Point(33, 257);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(524, 32);
+            this.comboBox3.Size = new System.Drawing.Size(524, 29);
             this.comboBox3.TabIndex = 14;
-            this.comboBox3.Text = "Seçiniz";
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox4
             // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.DropDownWidth = 450;
-            this.comboBox4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.comboBox4.Items.AddRange(new object[] {
@@ -243,14 +253,15 @@ namespace cezaRobotu2
             this.comboBox4.Location = new System.Drawing.Point(688, 92);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(508, 32);
+            this.comboBox4.Size = new System.Drawing.Size(508, 29);
             this.comboBox4.TabIndex = 15;
-            this.comboBox4.Text = "Seçiniz";
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // comboBox5
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
             "Seviye 1: Teknik düzenlemeye aykırılık",
@@ -258,9 +269,8 @@ namespace cezaRobotu2
             this.comboBox5.Location = new System.Drawing.Point(688, 172);
             this.comboBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(508, 32);
+            this.comboBox5.Size = new System.Drawing.Size(508, 29);
             this.comboBox5.TabIndex = 16;
-            this.comboBox5.Text = "Seçiniz";
             this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // label6
@@ -326,22 +336,41 @@ namespace cezaRobotu2
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1372, 34);
+            this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
             this.menuStrip1.TabIndex = 29;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // cezaLimitleriToolStripMenuItem
             // 
+            this.cezaLimitleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.robotToolStripMenuItem,
+            this.cezaLimitleriToolStripMenuItem1});
             this.cezaLimitleriToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cezaLimitleriToolStripMenuItem.Name = "cezaLimitleriToolStripMenuItem";
-            this.cezaLimitleriToolStripMenuItem.Size = new System.Drawing.Size(153, 28);
-            this.cezaLimitleriToolStripMenuItem.Text = "Ceza Limitleri";
+            this.cezaLimitleriToolStripMenuItem.Size = new System.Drawing.Size(78, 28);
+            this.cezaLimitleriToolStripMenuItem.Text = "Menü";
             this.cezaLimitleriToolStripMenuItem.Visible = false;
             this.cezaLimitleriToolStripMenuItem.Click += new System.EventHandler(this.cezaLimitleriToolStripMenuItem_Click);
             // 
+            // robotToolStripMenuItem
+            // 
+            this.robotToolStripMenuItem.Name = "robotToolStripMenuItem";
+            this.robotToolStripMenuItem.Size = new System.Drawing.Size(237, 34);
+            this.robotToolStripMenuItem.Text = "Robot";
+            this.robotToolStripMenuItem.Click += new System.EventHandler(this.robotToolStripMenuItem_Click);
+            // 
+            // cezaLimitleriToolStripMenuItem1
+            // 
+            this.cezaLimitleriToolStripMenuItem1.Name = "cezaLimitleriToolStripMenuItem1";
+            this.cezaLimitleriToolStripMenuItem1.Size = new System.Drawing.Size(237, 34);
+            this.cezaLimitleriToolStripMenuItem1.Text = "Ceza Limitleri";
+            this.cezaLimitleriToolStripMenuItem1.Click += new System.EventHandler(this.cezaLimitleriToolStripMenuItem1_Click);
+            // 
             // comboBox6
             // 
-            this.comboBox6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.IntegralHeight = false;
             this.comboBox6.Items.AddRange(new object[] {
@@ -350,14 +379,15 @@ namespace cezaRobotu2
             this.comboBox6.Location = new System.Drawing.Point(1017, 309);
             this.comboBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(180, 32);
+            this.comboBox6.Size = new System.Drawing.Size(180, 29);
             this.comboBox6.TabIndex = 30;
-            this.comboBox6.Text = "Seçiniz";
             this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // comboBox7
             // 
-            this.comboBox7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox7.FormattingEnabled = true;
             this.comboBox7.Items.AddRange(new object[] {
             "Evet",
@@ -365,14 +395,15 @@ namespace cezaRobotu2
             this.comboBox7.Location = new System.Drawing.Point(1017, 249);
             this.comboBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(180, 32);
+            this.comboBox7.Size = new System.Drawing.Size(180, 29);
             this.comboBox7.TabIndex = 31;
-            this.comboBox7.Text = "Seçiniz";
             this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
             // comboBox8
             // 
-            this.comboBox8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Items.AddRange(new object[] {
             "Evet",
@@ -380,9 +411,8 @@ namespace cezaRobotu2
             this.comboBox8.Location = new System.Drawing.Point(1017, 375);
             this.comboBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(180, 32);
+            this.comboBox8.Size = new System.Drawing.Size(180, 29);
             this.comboBox8.TabIndex = 32;
-            this.comboBox8.Text = "Seçiniz";
             this.comboBox8.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
             // 
             // textBox2
@@ -411,7 +441,7 @@ namespace cezaRobotu2
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1372, 603);
+            this.ClientSize = new System.Drawing.Size(1284, 603);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBox8);
             this.Controls.Add(this.label5);
@@ -474,6 +504,8 @@ namespace cezaRobotu2
         public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ToolStripMenuItem robotToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cezaLimitleriToolStripMenuItem1;
     }
 }
 
