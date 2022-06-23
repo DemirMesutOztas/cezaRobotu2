@@ -11,9 +11,11 @@ using System.Windows.Forms;
 
 namespace cezaRobotu2
 {
-   
+    
+
     public partial class Form1 : Form
     {
+        
         public double altlimit;
         public double sinif;
         public double hse;
@@ -27,13 +29,9 @@ namespace cezaRobotu2
         Form2 secondForm = new Form2();
             
             
-            
-
-
         public Form1()
         {
             InitializeComponent();
-
             
             
         }
@@ -51,6 +49,7 @@ namespace cezaRobotu2
 
             if (comboBox1.SelectedIndex == 0 || comboBox1.SelectedIndex == 14)
             {
+                
                 comboBox5.Enabled = false;
                 comboBox8.Enabled = false;
                 comboBox4.Enabled = true;
@@ -58,7 +57,7 @@ namespace cezaRobotu2
                 comboBox7.Enabled = true;
                 comboBox3.Enabled = true;
 
-
+               
             }
           else if (comboBox1.SelectedIndex == 1 || comboBox1.SelectedIndex == 2 || comboBox1.SelectedIndex == 3 || comboBox1.SelectedIndex == 4 || comboBox1.SelectedIndex == 5
                          || comboBox1.SelectedIndex == 8 || comboBox1.SelectedIndex == 10 || comboBox1.SelectedIndex == 11 || comboBox1.SelectedIndex == 13 || comboBox1.SelectedIndex == 15
@@ -222,19 +221,18 @@ namespace cezaRobotu2
             textBox1.Clear();
             textBox2.Clear();
 
-            
+            string mesaj = "";
             int x;
             x = comboBox1.SelectedIndex;
             try
-             {
+            {
 
-            
-                if (comboBox2.SelectedItem.ToString() == "2021")
+                if (comboBox2.SelectedIndex == 0)
                 {
                     altlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[x].Cells[2].Value);
                     ustlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[x].Cells[3].Value);
                 }
-                else if (comboBox2.SelectedItem.ToString() == "2022")
+                else if (comboBox2.SelectedIndex == 1)
                 {
                     altlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[x].Cells[4].Value);
                     ustlimit = Convert.ToInt32(secondForm.dataGridView1.Rows[x].Cells[5].Value);
@@ -250,7 +248,8 @@ namespace cezaRobotu2
                         {
                             sonuc = ustlimit;
                         }
-                        textBox2.Text += "Ölüm durumunda üst limit uygulanır." +"\r\n"+ "Üst Limit: "+ustlimit;
+
+                        mesaj += "Ölüm durumunda üst limit uygulanır." + "\r\n" + "Üst Limit: " + ustlimit;
                     }
                     else
                     {
@@ -259,21 +258,28 @@ namespace cezaRobotu2
                         {
                             sonuc = ustlimit;
                         }
-                        textBox2.Text += "Alt Limit: " + altlimit + "\r\n" + "Ürün Sınıfı: " + sinif + "\r\n" +
-                                         "Halk Sağlığına Etkisi: " + hse + "\r\n" + "Tekrar Durumu: " + tekrar + "\r\n" +
-                                         "Sonuç: " + altlimit + "*" + sinif + "*" + hse +"*" + tekrar;
-                    }
-                
 
-                
+                        mesaj += "Alt Limit: " + altlimit + "\r\n" + "Ürün Sınıfı: " + sinif + "\r\n" +
+                                 "Halk Sağlığına Etkisi: " + hse + "\r\n" + "Tekrar Durumu: " + tekrar + "\r\n" +
+                                 "Sonuç: " + altlimit + "*" + sinif + "*" + hse + "*" + tekrar;
+                    }
+
+
+
 
                 }
-                else if (comboBox1.SelectedIndex == 1 || comboBox1.SelectedIndex == 2 || comboBox1.SelectedIndex == 3 || comboBox1.SelectedIndex == 4 || comboBox1.SelectedIndex == 5
-                         || comboBox1.SelectedIndex == 8 || comboBox1.SelectedIndex == 10 || comboBox1.SelectedIndex == 11 || comboBox1.SelectedIndex == 13 || comboBox1.SelectedIndex == 15
-                         || comboBox1.SelectedIndex == 16 || comboBox1.SelectedIndex == 17 || comboBox1.SelectedIndex == 19 || comboBox1.SelectedIndex == 22
-                         || comboBox1.SelectedIndex == 23 || comboBox1.SelectedIndex == 24 || comboBox1.SelectedIndex == 25 || comboBox1.SelectedIndex == 28
-                         || comboBox1.SelectedIndex == 30 || comboBox1.SelectedIndex == 31 || comboBox1.SelectedIndex == 33 || comboBox1.SelectedIndex == 34
-                         || comboBox1.SelectedIndex == 35 || comboBox1.SelectedIndex == 39 || comboBox1.SelectedIndex == 41 || comboBox1.SelectedIndex == 42)
+                else if (comboBox1.SelectedIndex == 1 || comboBox1.SelectedIndex == 2 || comboBox1.SelectedIndex == 3 ||
+                         comboBox1.SelectedIndex == 4 || comboBox1.SelectedIndex == 5
+                         || comboBox1.SelectedIndex == 8 || comboBox1.SelectedIndex == 10 ||
+                         comboBox1.SelectedIndex == 11 || comboBox1.SelectedIndex == 13 || comboBox1.SelectedIndex == 15
+                         || comboBox1.SelectedIndex == 16 || comboBox1.SelectedIndex == 17 ||
+                         comboBox1.SelectedIndex == 19 || comboBox1.SelectedIndex == 22
+                         || comboBox1.SelectedIndex == 23 || comboBox1.SelectedIndex == 24 ||
+                         comboBox1.SelectedIndex == 25 || comboBox1.SelectedIndex == 28
+                         || comboBox1.SelectedIndex == 30 || comboBox1.SelectedIndex == 31 ||
+                         comboBox1.SelectedIndex == 33 || comboBox1.SelectedIndex == 34
+                         || comboBox1.SelectedIndex == 35 || comboBox1.SelectedIndex == 39 ||
+                         comboBox1.SelectedIndex == 41 || comboBox1.SelectedIndex == 42)
                 {
 
                     sonuc = altlimit * sinif * tekrar;
@@ -281,14 +287,15 @@ namespace cezaRobotu2
                     {
                         sonuc = ustlimit;
                     }
-                    textBox2.Text += "Alt Limit: " + altlimit + "\r\n" + "Ürün Sınıfı: " + sinif + "\r\n" +
-                                     "Tekrar Durumu: " + tekrar + "\r\n" +
-                                     "Sonuç: " + altlimit + "*" + sinif + "*" + tekrar;
+
+                    mesaj += "Alt Limit: " + altlimit + "\r\n" + "Ürün Sınıfı: " + sinif + "\r\n" +
+                             "Tekrar Durumu: " + tekrar + "\r\n" +
+                             "Sonuç: " + altlimit + "*" + sinif + "*" + tekrar;
 
                 }
                 else if (comboBox1.SelectedIndex == 21 || comboBox1.SelectedIndex == 29)
                 {
-                    if (comboBox8.SelectedIndex==0)
+                    if (comboBox8.SelectedIndex == 0)
                     {
                         if (comboBox7.SelectedItem.ToString() == "Evet")
                         {
@@ -297,40 +304,48 @@ namespace cezaRobotu2
                             {
                                 sonuc = ustlimit;
                             }
-                            textBox2.Text += "Ölüm durumunda üst limit uygulanır." + "\r\n" + "Üst Limit: " + ustlimit;
+
+                            mesaj += "Ölüm durumunda üst limit uygulanır." + "\r\n" + "Üst Limit: " + ustlimit;
                         }
-                        else if(comboBox7.SelectedItem.ToString() == "Hayır")
+                        else if (comboBox7.SelectedItem.ToString() == "Hayır")
                         {
                             sonuc = altlimit * aykirilik * hse * tekrar;
                             if (sonuc > ustlimit)
                             {
                                 sonuc = ustlimit;
                             }
-                            textBox2.Text += "Alt Limit: " + altlimit + "\r\n" + "Ürün Sınıfı: " + sinif + "\r\n" + "Aykırılık Seviyei: " + aykirilik + "\r\n" + "Halk Sağlığına Etkisi: " + hse + "\r\n" +
-                                             "Tekrar Durumu: " + tekrar + "\r\n" +
-                                              "Sonuç: " + altlimit + "*" + sinif + "*" + aykirilik + "*" + hse + "*" + tekrar;
+
+                            mesaj += "Alt Limit: " + altlimit + "\r\n" + "Ürün Sınıfı: " + sinif + "\r\n" +
+                                     "Aykırılık Seviyei: " + aykirilik + "\r\n" + "Halk Sağlığına Etkisi: " + hse +
+                                     "\r\n" +
+                                     "Tekrar Durumu: " + tekrar + "\r\n" +
+                                     "Sonuç: " + altlimit + "*" + sinif + "*" + aykirilik + "*" + hse + "*" + tekrar;
                         }
 
 
 
-                    
+
                     }
-                    else if(comboBox8.SelectedIndex==1)
+                    else if (comboBox8.SelectedIndex == 1)
                     {
                         sonuc = altlimit * aykirilik * tekrar;
                         if (sonuc > ustlimit)
                         {
                             sonuc = ustlimit;
                         }
-                        textBox2.Text += "Alt Limit: " + altlimit + "\r\n" + "Aykırılık Seviyesi: " + aykirilik + "\r\n" +
-                                         "Tekrar Durumu: " + tekrar + "\r\n" +
-                                          "Sonuç: " + altlimit + "*" +aykirilik + "*" + tekrar;
+
+                        mesaj += "Alt Limit: " + altlimit + "\r\n" + "Aykırılık Seviyesi: " + aykirilik + "\r\n" +
+                                 "Tekrar Durumu: " + tekrar + "\r\n" +
+                                 "Sonuç: " + altlimit + "*" + aykirilik + "*" + tekrar;
                     }
-                
+
                 }
-                else if ((comboBox1.SelectedIndex == 6 || comboBox1.SelectedIndex == 7 || comboBox1.SelectedIndex == 9 || comboBox1.SelectedIndex == 12
-                          || comboBox1.SelectedIndex == 18 || comboBox1.SelectedIndex == 20 || comboBox1.SelectedIndex == 26 || comboBox1.SelectedIndex == 27
-                          || comboBox1.SelectedIndex == 32 || comboBox1.SelectedIndex == 36 || comboBox1.SelectedIndex == 37 || comboBox1.SelectedIndex == 38
+                else if ((comboBox1.SelectedIndex == 6 || comboBox1.SelectedIndex == 7 ||
+                          comboBox1.SelectedIndex == 9 || comboBox1.SelectedIndex == 12
+                          || comboBox1.SelectedIndex == 18 || comboBox1.SelectedIndex == 20 ||
+                          comboBox1.SelectedIndex == 26 || comboBox1.SelectedIndex == 27
+                          || comboBox1.SelectedIndex == 32 || comboBox1.SelectedIndex == 36 ||
+                          comboBox1.SelectedIndex == 37 || comboBox1.SelectedIndex == 38
                           || comboBox1.SelectedIndex == 40 || comboBox1.SelectedIndex == 43))
                 {
                     sonuc = altlimit * tekrar;
@@ -340,78 +355,56 @@ namespace cezaRobotu2
                         sonuc = ustlimit;
                     }
 
-                    textBox2.Text += "Alt Limit: " + altlimit + "\r\n"  +
-                                     "Tekrar Durumu: " + tekrar + "\r\n" +
-                                      "Sonuç: " + altlimit + "*" + tekrar;
+                    mesaj += "Alt Limit: " + altlimit + "\r\n" +
+                             "Tekrar Durumu: " + tekrar + "\r\n" +
+                             "Sonuç: " + altlimit + "*" + tekrar;
                 }
-               
 
-
-            
-
-                if (sonuc > ustlimit )
+                foreach (Control clt in this.Controls)
                 {
-                    sonuc = ustlimit;
+                    if (clt is ComboBox)
+                    {
+                        if (clt.Enabled)
+                        {
+                            if (clt.Text == String.Empty)
+                            {
+                                throw new Exception();
+
+                            }
+                        }
+
+
+
+                    }
                 }
 
-             }
+
+                textBox2.Text = mesaj;
+                textBox1.Text = sonuc.ToString();
+
+
+            }
             catch (System.ArgumentOutOfRangeException)
             {
-                 MessageBox.Show("Aktif tüm alanlar doldurulmalıdır!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Aktif tüm alanlar doldurulmalıdır!", "Uyarı", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 
+
             }
-            catch(System.NullReferenceException)
+            catch (System.NullReferenceException)
             {
-                MessageBox.Show("Aktif tüm alanlar doldurulmalıdır!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Aktif tüm alanlar doldurulmalıdır!", "Uyarı", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+            }
+            catch (System.Exception)
+            {
+                MessageBox.Show("Aktif tüm alanlar doldurulmalıdır!", "Uyarı", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
 
-            if(comboBox3.Enabled)
-            {
-                if(comboBox3.SelectedIndex==-1)
-                {
-                    MessageBox.Show("Aktif tüm alanlar doldurulmalıdır!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            if (comboBox4.Enabled)
-            {
-                if (comboBox4.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Aktif tüm alanlar doldurulmalıdır!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            if (comboBox5.Enabled)
-            {
-                if (comboBox5.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Aktif tüm alanlar doldurulmalıdır!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            if (comboBox6.Enabled)
-            {
-                if (comboBox6.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Aktif tüm alanlar doldurulmalıdır!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            if (comboBox7.Enabled)
-            {
-                if (comboBox7.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Aktif tüm alanlar doldurulmalıdır!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            if (comboBox8.Enabled)
-            {
-                if (comboBox8.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Aktif tüm alanlar doldurulmalıdır!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-
-
-            textBox1.Text = sonuc.ToString();
-
-
+            
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -424,14 +417,7 @@ namespace cezaRobotu2
             comboBox6.SelectedIndex = -1;
             comboBox7.SelectedIndex = -1;
             comboBox8.SelectedIndex = -1;
-            comboBox1.Text = "Seçiniz";
-            comboBox2.Text = "Seçiniz";
-            comboBox3.Text = "Seçiniz";
-            comboBox4.Text = "Seçiniz";
-            comboBox5.Text = "Seçiniz";
-            comboBox6.Text = "Seçiniz";
-            comboBox7.Text = "Seçiniz";
-            comboBox8.Text = "Seçiniz";
+            
             textBox1.Clear();
             textBox2.Clear();
         }
