@@ -417,7 +417,18 @@ namespace cezaRobotu2
             comboBox6.SelectedIndex = -1;
             comboBox7.SelectedIndex = -1;
             comboBox8.SelectedIndex = -1;
-            
+
+            foreach (Control clt in this.Controls)
+            {
+                if (clt is ComboBox)
+                {
+                    clt.Enabled = true;
+
+
+                }
+            }
+
+
             textBox1.Clear();
             textBox2.Clear();
         }
